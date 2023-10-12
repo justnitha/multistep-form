@@ -76,7 +76,7 @@ export default function MultiStepForm() {
   }
 
   return (
-    <div className=" lg:mt-16 md:mt-48  lg:p-10 lg:rounded-3xl  lg:flex lg:w-[80%] md:w-[90%] md:m-auto lg:m-auto bg-white relative">
+    <div className=" lg:mt-16 md:mt-48 h-[120vh] lg:h-[84vh] lg:p-10 lg:rounded-3xl  lg:flex lg:w-[80%] md:w-[90%] md:m-auto lg:m-auto lg:bg-white relative">
       {/* computer */}
       <nav className="bg-desktop bg-no-repeat h-[73vh] w-[40%] p-8 hidden lg:block">
         <ul className=" uppercase text-white">
