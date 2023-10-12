@@ -121,24 +121,12 @@ export default function Summary({
                   confirm
                 </button>
                 <button
-                  onClick={() => handleCategoryChange("adds-ons")}
+                  onClick={() => handleCategoryChange("add-ons")}
                   className="py-2 text-Cool-gray font-medium px-6 absolute  left-0  capitalize"
                 >
                   Go back
                 </button>
               </div>
-              {/* <button
-                onClick={handleSubmit}
-                className="py-2 bg-Purplish-blue px-6 absolute bottom-10 right-[5rem] rounded-lg text-white capitalize"
-              >
-                confirm
-              </button>
-              <button
-                onClick={() => handleCategoryChange("add-ons")}
-                className="py-2 text-Marine-blue font-medium px-6 absolute bottom-10 left-[5rem] rounded-lg capitalize"
-              >
-                Go back
-              </button> */}
             </div>
           ) : (
             <></>

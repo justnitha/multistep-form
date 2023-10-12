@@ -339,7 +339,7 @@ export default function AddOns({
                           next step
                         </button>
                         <button
-                          onClick={() => handleCategoryChange("summary")}
+                          onClick={() => handleCategoryChange("plan")}
                           className="py-2 text-Cool-gray font-medium px-6 absolute  left-0  capitalize"
                         >
                           Go back

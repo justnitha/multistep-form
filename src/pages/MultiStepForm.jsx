@@ -54,6 +54,7 @@ export default function MultiStepForm() {
     swal({
       title: "Berhasil",
       icon: "success",
+      text:""
     })
     setFormData({
       Nama: '',
