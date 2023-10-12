@@ -35,7 +35,7 @@ body{
 }
 
  /* Mengubah warna border kotak centang saat dicentang */
- .containerr {
+.containerr {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;

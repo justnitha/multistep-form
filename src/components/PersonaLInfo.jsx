@@ -27,11 +27,11 @@ import { PersonalSchema } from "../Schema/PersonalSchema";
 
     console.log(errors);
     return (
-      <div className="mt-10">
+      <div className="lg:mt-10 md:mt-5">
         <form action="" onSubmit={handleSubmit} autoComplete="off">
           <div className="my-2">
           <div className="flex items-center justify-between">
-            <label htmlFor="nama" className="block py-1 text-lg text-Marine-blue ">
+            <label htmlFor="nama" className="block py-1 text-lg md:text-xl text-Marine-blue ">
               Name
             </label>
             {errors.Nama && touched.Nama && (
@@ -46,15 +46,15 @@ import { PersonalSchema } from "../Schema/PersonalSchema";
               type="text"
               placeholder="e.g. Sthepen King"
               className={errors.Nama && touched.Nama?
-              "form-error focus:outline-Purplish-blue  placeholder:font-normal placeholder:text-[#7a7a7a] p-2" 
+              "form-error focus:outline-Purplish-blue  placeholder:font-normal placeholder:text-[#7a7a7a] p-2 md:text-xl lg:text-base" 
               :
-              "form-active focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a]  p-2"}
+              "form-active focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a]  p-2 md:text-xl lg:text-base"}
               onBlur={handleBluer}
             />
           </div>
           <div className="my-5">
             <div className="flex items-center justify-between">
-              <label htmlFor="Email" className="block py-1 text-lg text-Marine-blue ">
+              <label htmlFor="Email" className="block py-1 text-lg md:text-xl text-Marine-blue ">
                 Email Address
               </label>
               {errors.Email && touched.Email && (
@@ -69,15 +69,15 @@ import { PersonalSchema } from "../Schema/PersonalSchema";
               type="email"
               placeholder="e.g. stephenking@lorem.com"
               className={errors.Email && touched.Email?
-              "form-error focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2" 
+              "form-error focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2  md:text-xl lg:text-base" 
               :
-              "form-active focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2"}
+              "form-active focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2  md:text-xl lg:text-base"}
               onBlur={handleBluer}
             />
           </div>
           <div className="my-5">
           <div className="flex items-center justify-between">
-            <label htmlFor="Phone" className="block py-1 text-lg text-Marine-blue ">
+            <label htmlFor="Phone" className="block py-1 text-lg md:text-xl text-Marine-blue ">
               Phone Number
             </label>
             {errors.Phone && touched.Phone && (
@@ -92,17 +92,17 @@ import { PersonalSchema } from "../Schema/PersonalSchema";
               type="text"
               placeholder="e.g. +1 23456 7890"
               className={errors.Phone && touched.Phone ?
-              "form-error focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2" 
+              "form-error focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2  md:text-xl lg:text-base" 
               :
-              "form-active focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2"}
+              "form-active focus:outline-Purplish-blue placeholder:font-normal placeholder:text-[#7a7a7a] p-2  md:text-xl lg:text-base"}
               onBlur={handleBluer}
             />
           </div>
-          <div className="fixed bottom-0 lg:absolute lg:right-[5rem] bg-white lg:-bottom-5  w-full lg:w-[200px]  right-0 text-end py-5">
+          <div className="fixed bottom-0 lg:absolute md:relative md:-right-5 lg:right-[5rem]  lg:bottom-5  w-full lg:w-[200px]  right-0 text-end py-5">
             <button
               disabled={isSubmitting}
               type="submit"
-              className="py-2 bg-Marine-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
+              className="py-2 bg-Marine-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize md:text-xl lg:text-base"
               >
               next step
             </button>

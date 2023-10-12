@@ -16,9 +16,7 @@ export default function AddOns({
   setFormData,
   selectedAdd1,
   setSelectedAdd1,
-  selectedAdd2,
   setSelectedAdd2,
-  selectedAdd3,
   setSelectedAdd3,
   checkedValues,
   setCheckedValues,
@@ -43,9 +41,6 @@ export default function AddOns({
     await new Promise((resolve) => setTimeout(resolve, 100));
     handleCategoryChange("summary");
     console.log(values);
-    console.log("Plan yang dipilih:", selectedAdd1);
-    console.log("Plan yang dipilih2:", selectedAdd2);
-    console.log("Plan yang dipilih3:", selectedAdd3);
   };
 
   return (
@@ -61,7 +56,6 @@ export default function AddOns({
               >
                 {({ errors, touched }) => (
                   <Form>
-                    {/* {add.map((item)=>( */}
                     <div
                       key={add[0].id}
                       role="group"
@@ -70,13 +64,13 @@ export default function AddOns({
                     >
                       <label
                         htmlFor={add[0].id}
-                        className={`containerr flex items-center border-2 rounded-lg p-5 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
+                        className={`containerr flex items-center border-2 rounded-lg lg:p-5 p-3 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
                           checkedValues[add[0].id]
                             ? "border-Purplish-blue bg-Alabaster"
                             : ""
                         }`}
                       >
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 items-center">
                           <Field
                             type="checkbox"
                             name="checked"
@@ -87,7 +81,7 @@ export default function AddOns({
                           />
                           <span className="checkmark top-8 left-3 rounded-md"></span>
                           <div>
-                            <h3 className="text-base lg:text-xl text-Marine-blue font-medium">
+                            <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                               {add[0].name}
                             </h3>
                             <p className="text-Cool-gray text-xs">
@@ -108,13 +102,13 @@ export default function AddOns({
                     >
                       <label
                         htmlFor={add[1].id}
-                        className={`containerr flex items-center border-2 rounded-lg p-5 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
+                        className={`containerr flex items-center border-2 rounded-lg lg:p-5 p-3 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
                           checkedValues[add[1].id]
                             ? "border-Purplish-blue bg-Alabaster"
                             : ""
                         }`}
                       >
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 items-center">
                           <Field
                             type="checkbox"
                             name="checked"
@@ -125,7 +119,7 @@ export default function AddOns({
                           />
                           <span className="checkmark top-8 left-3 rounded-md"></span>
                           <div>
-                            <h3 className="text-base lg:text-xl text-Marine-blue font-medium">
+                            <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                               {add[1].name}
                             </h3>
                             <p className="text-Cool-gray text-xs">
@@ -146,13 +140,13 @@ export default function AddOns({
                     >
                       <label
                         htmlFor={add[2].id}
-                        className={`containerr flex items-center border-2 rounded-lg p-5 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
+                        className={`containerr flex items-center border-2 rounded-lg lg:p-5 p-3 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
                           checkedValues[add[2].id]
                             ? "border-Purplish-blue bg-Alabaster"
                             : ""
                         }`}
                       >
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 items-center">
                           <Field
                             type="checkbox"
                             name="checked"
@@ -163,7 +157,7 @@ export default function AddOns({
                           />
                           <span className="checkmark top-8 left-3 rounded-md"></span>
                           <div>
-                            <h3 className="text-base lg:text-xl text-Marine-blue font-medium">
+                            <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                               {add[2].name}
                             </h3>
                             <p className="text-Cool-gray text-xs">
@@ -180,15 +174,15 @@ export default function AddOns({
                     {errors.checked && touched.checked && (
                       <p className="error text-red-500">{errors.checked}</p>
                     )}
-                    <div className="fixed bottom-0 lg:absolute lg:right-[5rem] bg-white lg:-bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
+                    <div className="fixed bottom-0 lg:absolute lg:right-[5rem]  lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
                       <button
-                        onClick={handleSubmit}
+                        
                         className="py-2 bg-Marine-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
                       >
                         next step
                       </button>
                       <button
-                        onClick={() => handleCategoryChange("summary")}
+                        onClick={() => handleCategoryChange("plan")}
                         className="py-2 text-Cool-gray font-medium px-6 absolute  left-0  capitalize"
                       >
                         Go back
@@ -221,13 +215,13 @@ export default function AddOns({
                       >
                         <label
                           htmlFor={add[3].id}
-                          className={`containerr flex items-center border-2 rounded-lg p-5 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
+                          className={`containerr flex items-center border-2 rounded-lg lg:p-5 p-3 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
                             checkedValues[add[3].id]
                               ? "border-Purplish-blue bg-Alabaster"
                               : ""
                           }`}
                         >
-                          <div className="flex gap-4">
+                          <div className="flex gap-4 items-center">
                             <Field
                               type="checkbox"
                               name="checked"
@@ -238,7 +232,7 @@ export default function AddOns({
                             />
                             <span className="checkmark top-8 left-3 rounded-md"></span>
                             <div>
-                              <h3 className="text-base lg:text-xl text-Marine-blue font-medium">
+                              <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                                 {add[3].name}
                               </h3>
                               <p className="text-Cool-gray text-xs">
@@ -259,13 +253,13 @@ export default function AddOns({
                       >
                         <label
                           htmlFor={add[4].id}
-                          className={`containerr flex items-center border-2 rounded-lg p-5 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
+                          className={`containerr flex items-center border-2 rounded-lg lg:p-5 p-3 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
                             checkedValues[add[4].id]
                               ? "border-Purplish-blue bg-Alabaster"
                               : ""
                           }`}
                         >
-                          <div className="flex gap-4">
+                          <div className="flex gap-4 items-center">
                             <Field
                               type="checkbox"
                               name="checked"
@@ -276,7 +270,7 @@ export default function AddOns({
                             />
                             <span className="checkmark top-8 left-3 rounded-md"></span>
                             <div>
-                              <h3 className="text-base lg:text-xl text-Marine-blue font-medium">
+                              <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                                 {add[4].name}
                               </h3>
                               <p className="text-Cool-gray text-xs">
@@ -297,13 +291,13 @@ export default function AddOns({
                       >
                         <label
                           htmlFor={add[5].id}
-                          className={`containerr flex items-center border-2 rounded-lg p-5 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
+                          className={`containerr flex items-center border-2 rounded-lg lg:p-5 p-3 cursor-pointer hover:border-Purplish-blue hover:bg-Alabaster mt-5 justify-between ${
                             checkedValues[add[5].id]
                               ? "border-Purplish-blue bg-Alabaster"
                               : ""
                           }`}
                         >
-                          <div className="flex gap-4">
+                          <div className="flex gap-4 items-center">
                             <Field
                               type="checkbox"
                               name="checked"
@@ -314,7 +308,7 @@ export default function AddOns({
                             />
                             <span className="checkmark top-8 left-3 rounded-md"></span>
                             <div>
-                              <h3 className="text-base lg:text-xl text-Marine-blue font-medium">
+                              <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                                 {add[5].name}
                               </h3>
                               <p className="text-Cool-gray text-xs">
@@ -331,9 +325,8 @@ export default function AddOns({
                       {errors.checked && touched.checked && (
                         <p className="error text-red-500">{errors.checked}</p>
                       )}
-                      <div className="fixed bottom-0 lg:absolute lg:right-[5rem] bg-white lg:-bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
+                      <div className="fixed bottom-0 lg:absolute lg:right-[5rem]  lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
                         <button
-                          onClick={handleSubmit}
                           className="py-2 bg-Marine-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
                         >
                           next step
@@ -345,7 +338,6 @@ export default function AddOns({
                           Go back
                         </button>
                       </div>
-                      {/* <p>{add.id=1}</p> */}
                     </Form>
                   )}
                 </Formik>

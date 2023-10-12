@@ -76,7 +76,7 @@ export default function MultiStepForm() {
   }
 
   return (
-    <div className=" lg:mt-16 lg:p-10 lg:rounded-3xl lg:flex  lg:w-[80%] lg:m-auto bg-white relative">
+    <div className=" lg:mt-16 md:mt-48  lg:p-10 lg:rounded-3xl  lg:flex lg:w-[80%] md:w-[90%] md:m-auto lg:m-auto bg-white relative">
       {/* computer */}
       <nav className="bg-desktop bg-no-repeat h-[73vh] w-[40%] p-8 hidden lg:block">
         <ul className=" uppercase text-white">
@@ -143,8 +143,8 @@ export default function MultiStepForm() {
       </nav>
 
       {/* mobile */}
-      <nav className="bg-mobile bg-no-repeat lg:hidden bg-cover bg-bottom h-[17rem] relative">
-        <ul className=" uppercase text-white flex items-center justify-center gap-4  py-7">
+      <nav className="bg-mobile bg-no-repeat lg:hidden bg-cover bg-bottom md:bg-top h-[15rem] relative">
+        <ul className=" uppercase text-white flex items-center justify-center gap-4 py-7 md:py-14 md:text-2xl">
           {/* personal info */}
           <div className={selectedCategory === "personal-info" ? "cursor-pointer" : "cursor-pointer"}>
             <li>
@@ -174,9 +174,9 @@ export default function MultiStepForm() {
       </nav>
 
       {visibleImages.map((item) => (
-        <div key={item.id} className="w-[88%] lg:w-full p-10 lg:px-20 absolute top-28 lg:top-0 left-6 lg:relative bg-white rounded-2xl lg:rounded-none">
-          <h1 className='text-Marine-blue text-2xl lg:text-4xl font-bold'>{item.header}</h1>
-          <p className=' text-Cool-gray mt-2'>{item.paragraph}</p>
+        <div key={item.id} className="w-[88%] md:w-[full] lg:w-full p-10 lg:px-20 absolute top-28 md:top-[10rem] lg:top-0 left-6 md:left-12 lg:left-0 lg:relative bg-white  rounded-2xl md:rounded-none lg:rounded-none">
+          <h1 className='text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold'>{item.header}</h1>
+          <p className=' text-Cool-gray mt-2 md:text-base'>{item.paragraph}</p>
           {item.category === "personal-info" && (
               <PersonaLInfo handleCategoryChange={handleCategoryChange} formData={formData} setFormData={setFormData} />
             )}
@@ -205,9 +205,7 @@ export default function MultiStepForm() {
               setSelectedAdd1={setSelectedAdd1}
               selectedAdd1={selectedAdd1}
               setSelectedAdd2={setSelectedAdd2}
-              selectedAdd2={selectedAdd2}
               setSelectedAdd3={setSelectedAdd3}
-              selectedAdd3={selectedAdd3}
               checkedValues={checkedValues}
               setCheckedValues={setCheckedValues}
             />
