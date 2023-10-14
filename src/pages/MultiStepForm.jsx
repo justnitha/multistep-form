@@ -38,7 +38,7 @@ export default function MultiStepForm() {
   };
 
   useEffect(() => {
-    handleCategoryChange("personal-info");
+    handleCategoryChange("plan");
   }, []);
 
   const filteredData =
@@ -76,7 +76,7 @@ export default function MultiStepForm() {
   }
 
   return (
-    <div className=" lg:mt-16 md:mt-48 h-[120vh] lg:h-[84vh] lg:p-10 lg:rounded-3xl  lg:flex lg:w-[80%] md:w-[90%] md:m-auto lg:m-auto lg:bg-white relative">
+    <div className=" lg:mt-16 md:mt-48 h-[100vh] lg:h-[84vh] lg:p-10 lg:rounded-3xl  lg:flex lg:w-[80%] md:w-[90%] md:m-auto lg:m-auto lg:bg-white relative">
       {/* computer */}
       <nav className="bg-desktop bg-no-repeat h-[73vh] w-[40%] p-8 hidden lg:block">
         <ul className=" uppercase text-white">
@@ -174,9 +174,9 @@ export default function MultiStepForm() {
       </nav>
 
       {visibleImages.map((item) => (
-        <div key={item.id} className="w-[88%] md:w-[full] lg:w-full p-10 lg:px-20 absolute top-28 md:top-[10rem] lg:top-0 left-6 md:left-12 lg:left-0 lg:relative bg-white  rounded-2xl md:rounded-none lg:rounded-none">
-          <h1 className='text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold'>{item.header}</h1>
-          <p className=' text-Cool-gray mt-2 md:text-base'>{item.paragraph}</p>
+        <div key={item.id} className="md:w-[full] lg:w-full lg:px-20  md:top-[10rem] lg:top-0  md:left-12 lg:left-0 lg:relative rounded-2xl md:rounded-none lg:rounded-none">
+          {/* <h1 className='text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold'>{item.header}</h1>
+          <p className=' text-Cool-gray mt-2 md:text-base'>{item.paragraph}</p> */}
           {item.category === "personal-info" && (
               <PersonaLInfo handleCategoryChange={handleCategoryChange} formData={formData} setFormData={setFormData} />
             )}

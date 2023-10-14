@@ -1,4 +1,5 @@
 import React from "react";
+import { Linked } from "./maping/Linked";
 
 export default function Summary({
   formData,
@@ -12,7 +13,13 @@ export default function Summary({
   return (
     <div>
       {selectedPlan ? (
-        <div>
+              <div className="md:mt-5 bg-white p-6 lg:p-0 w-[88%] lg:w-full lg:relative absolute top-28 lg:top-2 left-6 rounded-md ">
+<h1 className="text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold">
+          {Linked[3].header}
+        </h1>
+        <p className=" text-Cool-gray mt-2 md:text-base mb-3">
+          {Linked[3].paragraph}
+        </p>
           {selectedPlan.category === "month" ? (
             <div>
               <div className="lg:mt-10 mt-5 bg-Alabaster p-5 rounded-xl">
@@ -53,20 +60,6 @@ export default function Summary({
                     selectedPlan.itsPrice}
                   /mo
                 </p>
-              </div>
-              <div className="fixed bottom-0 lg:absolute lg:right-[5rem] lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end ">
-                <button
-                  onClick={handleSubmit}
-                  className="py-2 bg-Purplish-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
-                >
-                  confirm
-                </button>
-                <button
-                  onClick={() => handleCategoryChange("add-ons")}
-                  className="py-2 text-Cool-gray font-medium px-6 absolute  left-0  capitalize"
-                >
-                  Go back
-                </button>
               </div>
             </div>
           ) : (
@@ -113,7 +106,15 @@ export default function Summary({
                   /yr
                 </p>
               </div>
-              <div className="fixed bottom-0 lg:absolute lg:right-[5rem] lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
+      ) : (
+        <div></div>
+      )}
+      <div className="absolute bottom-0 lg:absolute lg:right-12 py-5 lg:py-0 lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end ">
                 <button
                   onClick={handleSubmit}
                   className="py-2 bg-Purplish-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
@@ -127,14 +128,6 @@ export default function Summary({
                   Go back
                 </button>
               </div>
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
-      ) : (
-        <div></div>
-      )}
     </div>
   );
 }

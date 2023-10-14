@@ -2,6 +2,8 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import { add } from "./maping/Add.js";
 import * as Yup from "yup";
+import { Linked } from "./maping/Linked.js";
+
 
 const validationSchema = Yup.object().shape({
   checked: Yup.array().min(1, "Pilih setidaknya satu item").of(Yup.string()),
@@ -56,6 +58,13 @@ export default function AddOns({
               >
                 {({ errors, touched }) => (
                   <Form>
+            <div className="md:mt-5 bg-white p-6 lg:p-0 w-[88%] lg:w-full lg:relative absolute top-28 lg:top-2 left-6 rounded-md ">
+            <h1 className="text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold">
+          {Linked[2].header}
+        </h1>
+        <p className=" text-Cool-gray mt-2 md:text-base mb-3">
+          {Linked[2].paragraph}
+        </p>
                     <div
                       key={add[0].id}
                       role="group"
@@ -79,17 +88,17 @@ export default function AddOns({
                             onClick={() => handleToggle1(add[0].id)}
                             checked={checkedValues[add[0].id]}
                           />
-                          <span className="checkmark top-8 left-3 rounded-md"></span>
+                          <span className="checkmark  left-3 rounded-md"></span>
                           <div>
                             <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                               {add[0].name}
                             </h3>
-                            <p className="text-Cool-gray text-xs">
+                            <p className="text-Cool-gray text-xs lg:text-sm">
                               {add[0].paragraph}
                             </p>
                           </div>
                         </div>
-                        <p className="text-Purplish-blue text-xs">
+                        <p className="text-Purplish-blue text-xs lg:text-sm">
                           {add[0].price}
                         </p>
                       </label>
@@ -117,17 +126,17 @@ export default function AddOns({
                             onClick={() => handleToggle1(add[1].id)}
                             checked={checkedValues[add[1].id]}
                           />
-                          <span className="checkmark top-8 left-3 rounded-md"></span>
+                          <span className="checkmark  left-3 rounded-md"></span>
                           <div>
                             <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                               {add[1].name}
                             </h3>
-                            <p className="text-Cool-gray text-xs">
+                            <p className="text-Cool-gray text-xs lg:text-sm">
                               {add[1].paragraph}
                             </p>
                           </div>
                         </div>
-                        <p className="text-Purplish-blue text-xs">
+                        <p className="text-Purplish-blue text-xs lg:text-sm">
                           {add[1].price}
                         </p>
                       </label>
@@ -155,17 +164,17 @@ export default function AddOns({
                             onClick={() => handleToggle1(add[2].id)}
                             checked={checkedValues[add[2].id]}
                           />
-                          <span className="checkmark top-8 left-3 rounded-md"></span>
+                          <span className="checkmark  left-3 rounded-md"></span>
                           <div>
                             <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                               {add[2].name}
                             </h3>
-                            <p className="text-Cool-gray text-xs">
+                            <p className="text-Cool-gray text-xs lg:text-sm">
                               {add[2].paragraph}
                             </p>
                           </div>
                         </div>
-                        <p className="text-Purplish-blue text-xs">
+                        <p className="text-Purplish-blue text-xs lg:text-sm">
                           {add[2].price}
                         </p>
                       </label>
@@ -174,7 +183,8 @@ export default function AddOns({
                     {errors.checked && touched.checked && (
                       <p className="error text-red-500">{errors.checked}</p>
                     )}
-                    <div className="fixed bottom-0 lg:absolute lg:right-[5rem]  lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
+                    </div>
+                    <div className="absolute bottom-0 lg:absolute lg:right-12  lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
                       <button
                         
                         className="py-2 bg-Marine-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
@@ -206,7 +216,13 @@ export default function AddOns({
                 >
                   {({ errors, touched }) => (
                     <Form>
-                      {/* {add.map((item)=>( */}
+                            <div className="md:mt-5 bg-white p-6 lg:p-0 w-[88%] lg:w-full lg:relative absolute top-28 lg:top-2 left-6 rounded-md ">
+                            <h1 className="text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold">
+          {Linked[2].header}
+        </h1>
+        <p className=" text-Cool-gray mt-2 md:text-base mb-3">
+          {Linked[2].paragraph}
+        </p>
                       <div
                         key={add[3].id}
                         role="group"
@@ -230,17 +246,17 @@ export default function AddOns({
                               onClick={() => handleToggle1(add[3].id)}
                               checked={checkedValues[add[3].id]}
                             />
-                            <span className="checkmark top-8 left-3 rounded-md"></span>
+                            <span className="checkmark  left-3 rounded-md"></span>
                             <div>
                               <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                                 {add[3].name}
                               </h3>
-                              <p className="text-Cool-gray text-xs">
+                              <p className="text-Cool-gray text-xs lg:text-sm">
                                 {add[3].paragraph}
                               </p>
                             </div>
                           </div>
-                          <p className="text-Purplish-blue text-xs">
+                          <p className="text-Purplish-blue text-xs lg:text-sm">
                             {add[3].price}
                           </p>
                         </label>
@@ -268,17 +284,17 @@ export default function AddOns({
                               onClick={() => handleToggle1(add[4].id)}
                               checked={checkedValues[add[4].id]}
                             />
-                            <span className="checkmark top-8 left-3 rounded-md"></span>
+                            <span className="checkmark  left-3 rounded-md"></span>
                             <div>
                               <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                                 {add[4].name}
                               </h3>
-                              <p className="text-Cool-gray text-xs">
+                              <p className="text-Cool-gray text-xs lg:text-sm">
                                 {add[4].paragraph}
                               </p>
                             </div>
                           </div>
-                          <p className="text-Purplish-blue text-xs">
+                          <p className="text-Purplish-blue text-xs lg:text-sm">
                             {add[4].price}
                           </p>
                         </label>
@@ -306,17 +322,17 @@ export default function AddOns({
                               onClick={() => handleToggle1(add[5].id)}
                               checked={checkedValues[add[5].id]}
                             />
-                            <span className="checkmark top-8 left-3 rounded-md"></span>
+                            <span className="checkmark  left-3 rounded-md"></span>
                             <div>
                               <h3 className="text-sm lg:text-xl text-Marine-blue font-medium">
                                 {add[5].name}
                               </h3>
-                              <p className="text-Cool-gray text-xs">
+                              <p className="text-Cool-gray text-xs lg:text-sm">
                                 {add[5].paragraph}
                               </p>
                             </div>
                           </div>
-                          <p className="text-Purplish-blue text-xs">
+                          <p className="text-Purplish-blue text-xs lg:text-sm">
                             {add[5].price}
                           </p>
                         </label>
@@ -325,7 +341,8 @@ export default function AddOns({
                       {errors.checked && touched.checked && (
                         <p className="error text-red-500">{errors.checked}</p>
                       )}
-                      <div className="fixed bottom-0 lg:absolute lg:right-[5rem]  lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
+                      </div>
+                      <div className="absolute bottom-0 lg:absolute lg:right-12  lg:bottom-5  w-full lg:w-[37rem]  right-0 text-end py-5">
                         <button
                           className="py-2 bg-Marine-blue px-6 me-6 lg:me-0 rounded-lg text-white capitalize"
                         >
