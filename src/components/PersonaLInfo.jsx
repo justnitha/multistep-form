@@ -38,7 +38,7 @@ export default function PersonaLInfo({
   return (
     <div >
       <form action="" onSubmit={handleSubmit} autoComplete="off">
-        <div className="md:mt-5 bg-white p-10 lg:p-0 w-[88%] lg:w-full lg:relative absolute top-28 lg:top-2 left-6 rounded-md ">
+        <div className="md:mt-5 bg-white p-7 lg:p-0 w-[88%] lg:w-full lg:relative absolute top-28 lg:top-2 left-6 rounded-md ">
       <h1 className="text-Marine-blue text-2xl md:text-4xl lg:text-4xl font-bold">
         {Linked[0].header}
       </h1>

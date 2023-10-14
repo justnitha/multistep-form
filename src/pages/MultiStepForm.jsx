@@ -38,7 +38,7 @@ export default function MultiStepForm() {
   };
 
   useEffect(() => {
-    handleCategoryChange("plan");
+    handleCategoryChange("personal-info");
   }, []);
 
   const filteredData =
